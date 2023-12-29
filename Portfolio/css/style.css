@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
@@ -26,7 +25,7 @@ p {
 .header ul li {
   display: flex;
   justify-content: en;
-=======
+}
 * {
   box-sizing: border-box;
 }
@@ -54,5 +53,4 @@ p {
 .header ul li {
   display: flex;
   justify-content: en;
->>>>>>> 0720c5ce86e75e1c87d9968e5a0924706c913bf7
 }
