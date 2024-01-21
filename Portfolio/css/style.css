@@ -24,30 +24,120 @@ p {
 
 /* Navbar CSS */
 
-.nav-container {
+#navBar {
   display: flex;
-  align-items: center;
-  background-color: rgb(98, 98, 98);
+  flex-direction: row;
+  margin: 0px 5%;
 }
 
-.logo-left, .nav-center {
-  height: 50px;
+#navBar h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 25%;
+  font-weight: 500;
 }
 
+#navLinks {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+a {
+ padding: 20px;
+ text-decoration: none;
+ color: black;
+}
+
+a:hover {
+  transition-duration: 0.5s;
+  color: red;
+}
+
+@media only screen and (max-width: 1000px) {
+  #navigation {
+    display: none;
+  }
+}
 /* End of Navbar CSS */
 
 /* Hero image section */
 .hero-banner {
-  background: white;
-  height: 100vh;
+  margin: 0px 5%;
+  min-height: 500px;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(
     rgba(0,0,0,0.5),
     rgba(0,0,0,0.5)), 
      url("../images/hero-image-ems.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  
+  background-size: cover;
+}
+
+.hero-text{
+  color: white;
+}
+.hero-text h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End of hero section */
+
+/* About me section */
+.aboutMe h2{
+  text-align: center;
+  padding: 20px;
+}
+.aboutMe p {
+  text-align: center;
+}
+
+#projectSubTitle {
+  text-align: center;
+  padding: 20px;
+}
+
+.projectGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "projectUno projectUno projectUno"
+  "projectDos projectDos projectDos"
+  "projectTres projectTres projectTres"
+  ;
+}
+
+#projectUno{
+  grid-area: projectUno;
+  background-image: url("https://placehold.co/600x400")
+}
+
+#projectDos{
+  grid-area: projectDos;
+  background-image: url("https://placehold.co/600x400")
+}
+
+#projectTres{
+  grid-area: projectTres;
+  background-image: url("https://placehold.co/600x400")
+}
+
+.contact h2 {
+  text-align: center;
+  padding: 20px;
+}
+#contactDetails{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
