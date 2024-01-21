@@ -3,23 +3,14 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 5%;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
+html {
+  scroll-behavior: smooth;
 }
 
 /* Navbar CSS */
@@ -52,8 +43,8 @@ a {
 }
 
 a:hover {
-  transition-duration: 0.5s;
-  color: red;
+  transition-duration: 0.7s;
+  color: rgb(110, 0, 194);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -98,6 +89,7 @@ a:hover {
 }
 .aboutMe p {
   text-align: center;
+  margin: 0 5%;
 }
 
 #projectSubTitle {
@@ -105,30 +97,35 @@ a:hover {
   padding: 20px;
 }
 
-.projectGrid {
-  margin: 0px 5%;
-  display: grid;
-  grid-template-rows: 100px 100px 100px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-  "projectUno projectUno projectUno"
-  "projectDos projectDos projectDos"
-  "projectTres projectTres projectTres"
-  ;
+.projectList {
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-#projectUno{
-  grid-area: projectUno;
+.projects {
+  height: 250px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+.projects:hover {
+  box-shadow: inset 0px 0px 3px, 0 0 8px;
+}
+
+#project1{
   background-image: url("https://placehold.co/600x400")
 }
 
-#projectDos{
-  grid-area: projectDos;
+#project2{
   background-image: url("https://placehold.co/600x400")
 }
 
-#projectTres{
-  grid-area: projectTres;
+#project3{
+  background-image: url("https://placehold.co/600x400")
+}
+
+#project4{
   background-image: url("https://placehold.co/600x400")
 }
 
@@ -137,7 +134,17 @@ a:hover {
   padding: 20px;
 }
 #contactDetails{
+  margin: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+/* Media queries */
+@media screen and (max-width: 1000px) {
+  .projectList, .navBar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
